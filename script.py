@@ -11,6 +11,7 @@ API_URL = "https://www.soliscloud.com:13333"
 API_KEY = ""
 API_SECRET = ""
 INVERTER_SN = ""  # Replace with your inverter serial number
+DISCORD_WEBHOOK_URL = ""
 
 # Dyness DL5.0 Battery Specifications
 BATTERY_NOMINAL_CAPACITY = 400  # Ah
@@ -20,7 +21,7 @@ BATTERY_MAX_DISCHARGE_CURRENT = 100  # A
 BATTERY_RECOMMENDED_DISCHARGE_CURRENT = 50  # A
 
 def send_discord_message(message):
-    webhook_url = "https://discord.com/api/webhooks/1317533080432672921/8skJaeyogLuHE4-cjsHOJEirnGVAKCfbyxj4P42b04j_orLg5vit0G4e2I7_bKpHX_h0"
+    webhook_url = DISCORD_WEBHOOK_URL
     payload = {"content": message}
     try:
         requests.post(webhook_url, json=payload)
