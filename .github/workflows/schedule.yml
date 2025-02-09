@@ -1,8 +1,9 @@
-name: Run Python Script Twice Daily
+name: Run Python Script on Schedule
 
 on:
   schedule:
-    - cron: '0 6,18 * * *'  # Runs at 06:00 and 18:00 UTC daily
+    - cron: '0 0 * * *'  # Runs at 00:00 UTC daily
+    - cron: '0 1 * * *'  # Runs at 01:00 UTC daily
   workflow_dispatch:  # Allows manual triggering
 
 jobs:
@@ -27,4 +28,13 @@ jobs:
           API_SECRET: ${{ secrets.API_SECRET }}
           INVERTER_SN: ${{ secrets.INVERTER_SN }}
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
-        run: python script.py
+        run: |
+          if [[ "${{ github.event_name }}" == "schedule" ]]; then
+            if [[ "${{ github.event.schedule }}" == "0 0 * * *" ]]; then
+              python script.py --hours 2
+            else
+              python script.py --hours 1
+            fi
+          else
+            python script.py
+          fi
