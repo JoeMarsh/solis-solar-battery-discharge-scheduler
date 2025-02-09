@@ -30,10 +30,9 @@ jobs:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
         run: |
           if [[ "${{ github.event_name }}" == "schedule" ]]; then
-            hour=$(date -u +%H)
-            if [[ "$hour" == "00" ]]; then
+            if [[ "${{ github.event.schedule }}" == "0 0 * * *" ]]; then
               python script.py --hours 2
-            else
+            elif [[ "${{ github.event.schedule }}" == "0 1 * * *" ]]; then
               python script.py --hours 1
             fi
           else
