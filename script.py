@@ -5,13 +5,14 @@ import requests
 from email.utils import formatdate
 import json
 import argparse
+import os
 
 # Constants
 API_URL = "https://www.soliscloud.com:13333"
-API_KEY = ""
-API_SECRET = ""
-INVERTER_SN = ""  # Replace with your inverter serial number
-DISCORD_WEBHOOK_URL = ""
+API_KEY = os.getenv("API_KEY")
+API_SECRET = os.getenv("API_SECRET")
+INVERTER_SN = os.getenv("INVERTER_SN")
+DISCORD_WEBHOOK_URL = os.getenv("DISCORD_WEBHOOK_URL")
 
 # Dyness DL5.0 Battery Specifications
 BATTERY_NOMINAL_CAPACITY = 400  # Ah
