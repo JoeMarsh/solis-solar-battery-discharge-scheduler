@@ -18,9 +18,9 @@ jobs:
         with:
           python-version: '3.x'
 
-      - name: Install Dependencies (if needed)
+      - name: Install Dependencies
         run: |
-          pip install -r requirements.txt || echo "No dependencies to install"
+          pip install requests
 
       - name: Run Python Script with Secrets
         env:
