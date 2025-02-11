@@ -1,40 +1,40 @@
-name: Run Python Script on Schedule
+# name: Run Python Script on Schedule
 
-on:
-  schedule:
-    # - cron: '0 0 * * *'  # Runs at 00:00 UTC daily
-    # - cron: '0 1 * * *'  # Runs at 01:00 UTC daily
-  workflow_dispatch:  # Allows manual triggering
+# on:
+#   schedule:
+#     - cron: '0 0 * * *'  # Runs at 00:00 UTC daily
+#     - cron: '0 1 * * *'  # Runs at 01:00 UTC daily
+#   workflow_dispatch:  # Allows manual triggering
 
-jobs:
-  run-script:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v3
+# jobs:
+#   run-script:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Checkout Repository
+#         uses: actions/checkout@v3
 
-      - name: Set Up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.x'
+#       - name: Set Up Python
+#         uses: actions/setup-python@v4
+#         with:
+#           python-version: '3.x'
 
-      - name: Install Dependencies
-        run: |
-          pip install requests
+#       - name: Install Dependencies
+#         run: |
+#           pip install requests
 
-      - name: Run Python Script with Secrets
-        env:
-          API_KEY: ${{ secrets.API_KEY }}
-          API_SECRET: ${{ secrets.API_SECRET }}
-          INVERTER_SN: ${{ secrets.INVERTER_SN }}
-          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
-        run: |
-          if [[ "${{ github.event_name }}" == "schedule" ]]; then
-            if [[ "${{ github.event.schedule }}" == "0 0 * * *" ]]; then
-              python script.py --hours 2
-            elif [[ "${{ github.event.schedule }}" == "0 1 * * *" ]]; then
-              python script.py --hours 1
-            fi
-          else
-            python script.py
-          fi
+#       - name: Run Python Script with Secrets
+#         env:
+#           API_KEY: ${{ secrets.API_KEY }}
+#           API_SECRET: ${{ secrets.API_SECRET }}
+#           INVERTER_SN: ${{ secrets.INVERTER_SN }}
+#           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+#         run: |
+#           if [[ "${{ github.event_name }}" == "schedule" ]]; then
+#             if [[ "${{ github.event.schedule }}" == "0 0 * * *" ]]; then
+#               python script.py --hours 2
+#             elif [[ "${{ github.event.schedule }}" == "0 1 * * *" ]]; then
+#               python script.py --hours 1
+#             fi
+#           else
+#             python script.py
+#           fi
