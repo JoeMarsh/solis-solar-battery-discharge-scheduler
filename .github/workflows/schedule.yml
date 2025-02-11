@@ -2,8 +2,8 @@ name: Run Python Script on Schedule
 
 on:
   schedule:
-    - cron: '0 0 * * *'  # Runs at 00:00 UTC daily
-    - cron: '0 1 * * *'  # Runs at 01:00 UTC daily
+    # - cron: '0 0 * * *'  # Runs at 00:00 UTC daily
+    # - cron: '0 1 * * *'  # Runs at 01:00 UTC daily
   workflow_dispatch:  # Allows manual triggering
 
 jobs:
