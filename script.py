@@ -20,6 +20,8 @@ BATTERY_OPERATING_VOLTAGE_MIN = 44.8  # V
 BATTERY_OPERATING_VOLTAGE_MAX = 57.6  # V
 BATTERY_MAX_DISCHARGE_CURRENT = 100  # A
 
+DISCHARGE_SOC = 20
+
 def send_discord_message(message):
     webhook_url = DISCORD_WEBHOOK_URL
     payload = {"content": message}
@@ -65,7 +67,7 @@ def get_battery_soc():
         return None
 
 def calculate_discharge_current(soc, voltage, time_hours):
-    soc_to_discharge = soc - 20  # Discharge down to 20% SOC
+    soc_to_discharge = soc - DISCHARGE_SOC  # Discharge down to 20% SOC
     discharge_current = int((soc_to_discharge / 100) * BATTERY_NOMINAL_CAPACITY / time_hours)  # in Amps
     return min(discharge_current, BATTERY_MAX_DISCHARGE_CURRENT)
 
