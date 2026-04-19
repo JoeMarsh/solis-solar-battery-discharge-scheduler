@@ -2,17 +2,21 @@ import base64
 import hashlib
 import hmac
 import requests
+from datetime import datetime
 from email.utils import formatdate
 import json
 import argparse
+import logging
 import os
+import sys
+from logging.handlers import RotatingFileHandler
 
 # Constants
 API_URL = "https://www.soliscloud.com:13333"
-API_KEY = os.getenv("API_KEY")
-API_SECRET = os.getenv("API_SECRET")
-INVERTER_SN = os.getenv("INVERTER_SN")
-DISCORD_WEBHOOK_URL = os.getenv("DISCORD_WEBHOOK_URL")
+API_KEY = os.getenv("API_KEY") or "your_api_key_here"
+API_SECRET = os.getenv("API_SECRET") or "your_api_secret_here"
+INVERTER_SN = os.getenv("INVERTER_SN") or "your_inverter_sn_here"
+DISCORD_WEBHOOK_URL = os.getenv("DISCORD_WEBHOOK_URL") or "your_discord_webhook_url_here"
 
 # Dyness DL5.0 Battery Specifications
 BATTERY_NOMINAL_CAPACITY = 400  # Ah (4 x 100Ah batteries)
@@ -21,15 +25,35 @@ BATTERY_OPERATING_VOLTAGE_MAX = 57.6  # V
 BATTERY_MAX_DISCHARGE_CURRENT = 100  # A
 
 DISCHARGE_SOC = 20
+CHARGE_TIME_RANGE = "02:05-05:55"
+CLEAR_DISCHARGE_VALUE = (
+    f"100,0,{CHARGE_TIME_RANGE},00:00-00:00,"
+    "0,0,00:00-00:00,00:00-00:00,"
+    "0,0,00:00-00:00,00:00-00:00"
+)
+
+# Logging. One source of truth: file next to this script, auto-rotated.
+# ~5MB max total (1MB current + 4 x 1MB rotated, gzipped after rotate).
+# Also mirrors to stdout so manual runs show output in the terminal.
+LOG_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "solarSet.log")
+log = logging.getLogger("solis")
+if not log.handlers:
+    log.setLevel(logging.INFO)
+    _fh = RotatingFileHandler(LOG_PATH, maxBytes=1_000_000, backupCount=4, delay=True)
+    _fh.setFormatter(logging.Formatter("%(asctime)s %(levelname)s %(message)s"))
+    log.addHandler(_fh)
+    _sh = logging.StreamHandler(sys.stdout)
+    _sh.setFormatter(logging.Formatter("%(message)s"))
+    log.addHandler(_sh)
 
 def send_discord_message(message):
     webhook_url = DISCORD_WEBHOOK_URL
     payload = {"content": message}
     try:
-        requests.post(webhook_url, json=payload)
-        print("Discord message sent!")
+        requests.post(webhook_url, json=payload, timeout=10)
+        log.info("Discord message sent")
     except Exception as e:
-        print(f"Failed to send Discord message: {e}")
+        log.warning("Failed to send Discord message: %s", e)
 
 def get_md5_digest(body):
     return base64.b64encode(hashlib.md5(body.encode('utf-8')).digest()).decode('utf-8')
@@ -58,48 +82,22 @@ def get_battery_soc():
         "Authorization": f"API {API_KEY}:{signature}",
     }
     url = f"{API_URL}{path}"
-    response = requests.post(url, data=body, headers=headers)
+    response = requests.post(url, data=body, headers=headers, timeout=30)
     data = response.json()
     if data.get("success"):
         return data["data"].get("batteryCapacitySoc")
     else:
-        print("Failed to retrieve SOC:", data.get("msg"))
+        log.error("Failed to retrieve SOC: %s", data.get("msg"))
         return None
 
-def calculate_discharge_current(soc, voltage, time_hours):
-    soc_to_discharge = soc - DISCHARGE_SOC  # Discharge down to 20% SOC
+def calculate_discharge_current(soc, time_hours):
+    soc_to_discharge = soc - DISCHARGE_SOC  # Discharge down to DISCHARGE_SOC%
     discharge_current = int((soc_to_discharge / 100) * BATTERY_NOMINAL_CAPACITY / time_hours)  # in Amps
     return min(discharge_current, BATTERY_MAX_DISCHARGE_CURRENT)
 
-def set_inverter_parameters(soc, voltage, time_hours):
+def _send_control(cid, value):
+    """POST a SolisCloud control command. Used for cid 103 (schedule), cid 56 (time-set), etc."""
     path = "/v2/api/control"
-    cid = 103  # Command ID for setting inverter parameters
-
-    # Calculate discharge current for the specified time period
-    discharge_current = calculate_discharge_current(soc, voltage, time_hours)
-
-    # Fixed time range for charging
-    charge_time_range = "02:05-05:55"
-
-    # Calculate the discharge start time
-    discharge_end_hour = 2  # Discharge ends at 02:00
-    discharge_start_hour = 24 - int(time_hours) + discharge_end_hour  # Adjust for hours spanning midnight
-    if discharge_start_hour >= 24:
-        discharge_start_hour -= 24  # Keep it within 24-hour clock range
-
-    # Format time ranges correctly
-    if discharge_start_hour < discharge_end_hour:  # Same day
-        discharge_time_range = f"{discharge_start_hour:02d}:00-{discharge_end_hour:02d}:00"
-    else:  # Spans midnight
-        discharge_time_range = f"{discharge_start_hour:02d}:00-02:00"
-
-    if discharge_current < 1:
-        # No discharge current, set discharge range to 0
-        value = f"100,0,{charge_time_range},00:00-00:00,0,0,00:00-00:00,00:00-00:00,0,0,00:00-00:00,00:00-00:00"
-    else:
-        # Construct the value string dynamically with fixed charging and dynamic discharging
-        value = f"100,{int(discharge_current)},{charge_time_range},{discharge_time_range},0,0,00:00-00:00,00:00-00:00,0,0,00:00-00:00,00:00-00:00"
-
     body = json.dumps({
         "cid": cid,
         "inverterSn": INVERTER_SN,
@@ -116,39 +114,111 @@ def set_inverter_parameters(soc, voltage, time_hours):
         "Date": date,
         "Authorization": f"API {API_KEY}:{signature}",
     }
-    url = f"{API_URL}{path}"
-    response = requests.post(url, data=body, headers=headers)
-    send_discord_message(f"Discharge Amps: {discharge_current}, Discharge Time: {discharge_time_range}")
-    responsejson = response.json()
+    response = requests.post(f"{API_URL}{path}", data=body, headers=headers, timeout=30)
+    try:
+        responsejson = response.json()
+    except ValueError:
+        responsejson = {"_raw": response.text}
+    log.info("cid %s write: HTTP %s | sent value=%r", cid, response.status_code, value)
+    log.info("cid %s write: full response=%s", cid, json.dumps(responsejson, ensure_ascii=False))
     return responsejson
+
+def set_inverter_parameters(soc, time_hours):
+    discharge_current = calculate_discharge_current(soc, time_hours)
+
+    # Calculate the discharge start time
+    discharge_end_hour = 2  # Discharge ends at 02:00
+    discharge_start_hour = 24 - time_hours + discharge_end_hour
+    if discharge_start_hour >= 24:
+        discharge_start_hour -= 24
+
+    discharge_time_range = f"{discharge_start_hour:02d}:00-{discharge_end_hour:02d}:00"
+
+    if discharge_current < 1:
+        value = CLEAR_DISCHARGE_VALUE
+    else:
+        value = (
+            f"100,{int(discharge_current)},{CHARGE_TIME_RANGE},{discharge_time_range},"
+            "0,0,00:00-00:00,00:00-00:00,"
+            "0,0,00:00-00:00,00:00-00:00"
+        )
+
+    send_discord_message(f"Discharge Amps: {discharge_current}, Discharge Time: {discharge_time_range}")
+    return _send_control(103, value)
+
+def clear_discharge_slots():
+    log.info("Clearing discharge slots (charge window %s preserved)", CHARGE_TIME_RANGE)
+    send_discord_message(f"Clearing discharge slots (charge window {CHARGE_TIME_RANGE} preserved)")
+    response = _send_control(103, CLEAR_DISCHARGE_VALUE)
+    data_list = response.get("data", [])
+    if isinstance(data_list, list) and data_list:
+        msg = data_list[0].get("msg", "No message").replace("<br>", "\n")
+    else:
+        msg = "No data or invalid format"
+    log.info("Response: %s", msg)
+    send_discord_message(f"Response: {msg}")
+    return response
+
+def sync_inverter_time():
+    """Push the Pi's current local time to the inverter (cid 56). Inverter is on Irish local time."""
+    now_str = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    log.info("Syncing inverter time to %s (Pi local clock)", now_str)
+    send_discord_message(f"Syncing inverter time to {now_str}")
+    response = _send_control(56, now_str)
+    data_list = response.get("data", [])
+    if isinstance(data_list, list) and data_list:
+        msg = data_list[0].get("msg", "No message").replace("<br>", "\n")
+    else:
+        msg = "No data or invalid format"
+    log.info("Response: %s", msg)
+    send_discord_message(f"Response: {msg}")
+    return response
 
 def manage_discharge(hours):
     soc = get_battery_soc()
-    voltage = (BATTERY_OPERATING_VOLTAGE_MIN + BATTERY_OPERATING_VOLTAGE_MAX) / 2  # Average voltage
     if soc is not None:
-        print(f"Current Battery SOC: {soc}%")
+        log.info("Current Battery SOC: %s%%", soc)
         send_discord_message(f"Current Battery SOC: {soc}%")
-        if soc > 20:
-            print("Setting inverter parameters...")
-            response = set_inverter_parameters(soc, voltage, hours)
+        if soc > DISCHARGE_SOC:
+            log.info("Setting inverter parameters...")
+            response = set_inverter_parameters(soc, hours)
             data_list = response.get("data", [])
             if isinstance(data_list, list) and len(data_list) > 0:
                 responsemsg = data_list[0].get("msg", "No message")
             else:
                 responsemsg = "No data or invalid format"
             formatted_response_msg = responsemsg.replace("<br>", "\n")
-            print("Response:", formatted_response_msg)
+            log.info("Response: %s", formatted_response_msg)
             send_discord_message(f"Response: {formatted_response_msg}")
         else:
-            print("SOC is too low for discharge.")
+            log.info("SOC is too low for discharge.")
             send_discord_message("SOC is too low for discharge.")
     else:
-        print("Unable to retrieve SOC.")
+        log.error("Unable to retrieve SOC.")
         send_discord_message("Unable to retrieve SOC.")
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Manage battery discharge.")
-    parser.add_argument("--hours", type=float, default=1.0, help="Discharge duration in hours (default: 1 hour).")
+    parser.add_argument("--hours", type=int, default=1, help="Discharge duration in whole hours (default: 1).")
+    parser.add_argument("--clear", action="store_true", help="Clear discharge slots (preserves the charge window). Skips SOC check.")
+    parser.add_argument("--sync-time", action="store_true", help="Push the Pi's current local time to the inverter (cid 56). One-shot.")
     args = parser.parse_args()
 
-    manage_discharge(args.hours)
+    if args.clear:
+        mode = "--clear"
+    elif args.sync_time:
+        mode = "--sync-time"
+    else:
+        mode = f"--hours {args.hours}"
+    log.info("=== run start: %s ===", mode)
+    try:
+        if args.clear:
+            clear_discharge_slots()
+        elif args.sync_time:
+            sync_inverter_time()
+        else:
+            manage_discharge(args.hours)
+        log.info("=== run end ===")
+    except Exception:
+        log.exception("Unhandled error during run")
+        raise
