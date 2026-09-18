@@ -1,0 +1,88 @@
+{
+  "verified_at": "2026-09-18T14:14:50.277003+00:00",
+  "protocol": "six-slot",
+  "source_snapshot": "snapshots/20260918-145558-652258.json",
+  "note": "Read-only final verification. New firmware uses per-slot enables; legacy global TOU bit is not required. Mode 96 preserves Feed-in Priority and grid charging.",
+  "settings": {
+    "6798": {
+      "value": "43605",
+      "raw": "43605"
+    },
+    "636": {
+      "value": "96",
+      "raw": "96"
+    },
+    "5916": {
+      "value": "1",
+      "raw": "1"
+    },
+    "5917": {
+      "value": "0",
+      "raw": "1"
+    },
+    "5918": {
+      "value": "0",
+      "raw": "1"
+    },
+    "5919": {
+      "value": "0",
+      "raw": "1"
+    },
+    "5920": {
+      "value": "0",
+      "raw": "1"
+    },
+    "5921": {
+      "value": "0",
+      "raw": "1"
+    },
+    "5922": {
+      "value": "0",
+      "raw": "1"
+    },
+    "5923": {
+      "value": "0",
+      "raw": "1"
+    },
+    "5924": {
+      "value": "0",
+      "raw": "1"
+    },
+    "5925": {
+      "value": "0",
+      "raw": "1"
+    },
+    "5926": {
+      "value": "0",
+      "raw": "1"
+    },
+    "5927": {
+      "value": "0",
+      "raw": "1"
+    },
+    "5946": {
+      "value": "02:05-05:55",
+      "raw": "02:05-05:55"
+    },
+    "5948": {
+      "value": "100",
+      "raw": "100"
+    },
+    "5928": {
+      "value": "100",
+      "raw": "100"
+    },
+    "5964": {
+      "value": "00:00-00:00",
+      "raw": "00:00-00:00"
+    },
+    "5967": {
+      "value": "0",
+      "raw": "0"
+    },
+    "5965": {
+      "value": "20",
+      "raw": "20"
+    }
+  }
+}

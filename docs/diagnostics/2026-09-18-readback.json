@@ -1,0 +1,1896 @@
+{
+  "captured_on": "2026-09-18",
+  "scope": "Read-only current settings after owner switched to Self-Use in morning; not an overnight configuration snapshot. History fields are a subset of the API response.",
+  "records": [
+    {
+      "path": "/v2/api/atRead",
+      "request_fields": {
+        "cid": 5916
+      },
+      "http": 200,
+      "response": {
+        "msg": "success",
+        "code": "0",
+        "data": {
+          "msg": "0",
+          "yuanzhi": "0",
+          "command": "AT+TEST=GIN485:01 03 aa bb 00 01 d5 f7",
+          "needLoop": "false"
+        },
+        "orderId": "0",
+        "time": "1789737649247",
+        "inverterSn": "[REDACTED]",
+        "cid": "5916",
+        "sendTime": "1789737649257"
+      }
+    },
+    {
+      "path": "/v2/api/atRead",
+      "request_fields": {
+        "cid": 5946
+      },
+      "http": 200,
+      "response": {
+        "msg": "success",
+        "code": "0",
+        "data": {
+          "msg": "00:00-00:00",
+          "yuanzhi": "00:00-00:00",
+          "command": "AT+TEST=GIN485:01 03 aa bf 00 04 54 35",
+          "needLoop": "false"
+        },
+        "orderId": "00:00-00:00",
+        "time": "1789737779376",
+        "inverterSn": "[REDACTED]",
+        "cid": "5946",
+        "sendTime": "1789737779389"
+      }
+    },
+    {
+      "path": "/v2/api/atRead",
+      "request_fields": {
+        "cid": 5922
+      },
+      "http": 200,
+      "response": {
+        "msg": "success",
+        "code": "0",
+        "data": {
+          "msg": "0",
+          "yuanzhi": "0",
+          "command": "AT+TEST=GIN485:01 03 aa bb 00 01 d5 f7",
+          "needLoop": "false"
+        },
+        "orderId": "0",
+        "time": "1789737808876",
+        "inverterSn": "[REDACTED]",
+        "cid": "5922",
+        "sendTime": "1789737808897"
+      }
+    },
+    {
+      "path": "/v2/api/atRead",
+      "request_fields": {
+        "cid": 5964
+      },
+      "http": 200,
+      "response": {
+        "msg": "success",
+        "code": "0",
+        "data": {
+          "msg": "00:00-00:00",
+          "yuanzhi": "00:00-00:00",
+          "command": "AT+TEST=GIN485:01 03 aa e9 00 04 b4 25",
+          "needLoop": "false"
+        },
+        "orderId": "00:00-00:00",
+        "time": "1789737824220",
+        "inverterSn": "[REDACTED]",
+        "cid": "5964",
+        "sendTime": "1789737824224"
+      }
+    },
+    {
+      "path": "/v2/api/atRead",
+      "request_fields": {
+        "cid": 5948
+      },
+      "http": 200,
+      "response": {
+        "msg": "success",
+        "code": "0",
+        "data": {
+          "msg": "50",
+          "yuanzhi": "50",
+          "command": "AT+TEST=GIN485:01 03 aa bd 00 01 35 f6",
+          "needLoop": "false"
+        },
+        "orderId": "50",
+        "time": "1789737833222",
+        "inverterSn": "[REDACTED]",
+        "cid": "5948",
+        "sendTime": "1789737833240"
+      }
+    },
+    {
+      "path": "/v2/api/atRead",
+      "request_fields": {
+        "cid": 5928
+      },
+      "http": 200,
+      "response": {
+        "msg": "success",
+        "code": "0",
+        "data": {
+          "msg": "50",
+          "yuanzhi": "50",
+          "command": "AT+TEST=GIN485:01 03 aa bc 00 01 64 36",
+          "needLoop": "false"
+        },
+        "orderId": "50",
+        "time": "1789737834538",
+        "inverterSn": "[REDACTED]",
+        "cid": "5928",
+        "sendTime": "1789737834540"
+      }
+    },
+    {
+      "path": "/v2/api/atRead",
+      "request_fields": {
+        "cid": 5967
+      },
+      "http": 200,
+      "response": {
+        "msg": "success",
+        "code": "0",
+        "data": {
+          "msg": "50",
+          "yuanzhi": "50",
+          "command": "AT+TEST=GIN485:01 03 aa e7 00 01 15 e5",
+          "needLoop": "false"
+        },
+        "orderId": "50",
+        "time": "1789737854916",
+        "inverterSn": "[REDACTED]",
+        "cid": "5967",
+        "sendTime": "1789737854929"
+      }
+    },
+    {
+      "path": "/v2/api/atRead",
+      "request_fields": {
+        "cid": 5965
+      },
+      "http": 200,
+      "response": {
+        "msg": "success",
+        "code": "0",
+        "data": {
+          "msg": "50",
+          "yuanzhi": "50",
+          "command": "AT+TEST=GIN485:01 03 aa e6 00 01 44 25",
+          "needLoop": "false"
+        },
+        "orderId": "50",
+        "time": "1789737862863",
+        "inverterSn": "[REDACTED]",
+        "cid": "5965",
+        "sendTime": "1789737862870"
+      }
+    },
+    {
+      "path": "/v2/api/atRead",
+      "request_fields": {
+        "cid": 636
+      },
+      "http": 200,
+      "response": {
+        "msg": "success",
+        "code": "0",
+        "data": {
+          "msg": "33",
+          "yuanzhi": "33",
+          "command": "AT+TEST=GIN485:01 03 a8 66 00 01 44 75",
+          "needLoop": "false"
+        },
+        "orderId": "33",
+        "time": "1789737864552",
+        "inverterSn": "[REDACTED]",
+        "cid": "636",
+        "sendTime": "1789737864562"
+      }
+    },
+    {
+      "path": "/v1/api/inverterDay",
+      "request_fields": {
+        "money": "EUR",
+        "time": "2026-09-18",
+        "timeZone": 1
+      },
+      "http": 200,
+      "response": {
+        "success": true,
+        "code": "0",
+        "msg": "success",
+        "traceId": "600efc37cd0647c8bf29577a046fb1a5",
+        "row_count": 179,
+        "data": [
+          {
+            "dataTimestamp": "1789686140356",
+            "time": "07:02:20",
+            "pac": 0,
+            "batteryCapacitySoc": 65,
+            "batteryPower": -409.0,
+            "familyLoadPower": 307.0
+          },
+          {
+            "dataTimestamp": "1789686440355",
+            "time": "07:07:20",
+            "pac": 0,
+            "batteryCapacitySoc": 64,
+            "batteryPower": -409.0,
+            "familyLoadPower": 309.0
+          },
+          {
+            "dataTimestamp": "1789686740361",
+            "time": "07:12:20",
+            "pac": 0,
+            "batteryCapacitySoc": 64,
+            "batteryPower": -409.0,
+            "familyLoadPower": 307.0
+          },
+          {
+            "dataTimestamp": "1789687040162",
+            "time": "07:17:20",
+            "pac": 0,
+            "batteryCapacitySoc": 64,
+            "batteryPower": -409.0,
+            "familyLoadPower": 309.0
+          },
+          {
+            "dataTimestamp": "1789687343365",
+            "time": "07:22:23",
+            "pac": 0,
+            "batteryCapacitySoc": 64,
+            "batteryPower": -409.0,
+            "familyLoadPower": 307.0
+          },
+          {
+            "dataTimestamp": "1789687640246",
+            "time": "07:27:20",
+            "pac": 0,
+            "batteryCapacitySoc": 64,
+            "batteryPower": -399.0,
+            "familyLoadPower": 297.0
+          },
+          {
+            "dataTimestamp": "1789687943251",
+            "time": "07:32:23",
+            "pac": 0,
+            "batteryCapacitySoc": 64,
+            "batteryPower": -399.0,
+            "familyLoadPower": 296.0
+          },
+          {
+            "dataTimestamp": "1789688243089",
+            "time": "07:37:23",
+            "pac": 0,
+            "batteryCapacitySoc": 63,
+            "batteryPower": -399.0,
+            "familyLoadPower": 298.0
+          },
+          {
+            "dataTimestamp": "1789688540355",
+            "time": "07:42:20",
+            "pac": 0,
+            "batteryCapacitySoc": 63,
+            "batteryPower": -399.0,
+            "familyLoadPower": 300.0
+          },
+          {
+            "dataTimestamp": "1789688840358",
+            "time": "07:47:20",
+            "pac": 0,
+            "batteryCapacitySoc": 63,
+            "batteryPower": -399.0,
+            "familyLoadPower": 298.0
+          },
+          {
+            "dataTimestamp": "1789689140504",
+            "time": "07:52:20",
+            "pac": 0,
+            "batteryCapacitySoc": 63,
+            "batteryPower": -399.0,
+            "familyLoadPower": 299.0
+          },
+          {
+            "dataTimestamp": "1789689440160",
+            "time": "07:57:20",
+            "pac": 0,
+            "batteryCapacitySoc": 63,
+            "batteryPower": -399.0,
+            "familyLoadPower": 295.0
+          },
+          {
+            "dataTimestamp": "1789689762261",
+            "time": "08:02:42",
+            "pac": 0,
+            "batteryCapacitySoc": 63,
+            "batteryPower": -430.0,
+            "familyLoadPower": 328.0
+          },
+          {
+            "dataTimestamp": "1789689890463",
+            "time": "08:04:50",
+            "pac": 0,
+            "batteryCapacitySoc": 63,
+            "batteryPower": -430.0,
+            "familyLoadPower": 327.0
+          },
+          {
+            "dataTimestamp": "1789690019452",
+            "time": "08:06:59",
+            "pac": 0,
+            "batteryCapacitySoc": 63,
+            "batteryPower": -430.0,
+            "familyLoadPower": 328.0
+          },
+          {
+            "dataTimestamp": "1789690053953",
+            "time": "08:07:33",
+            "pac": 0,
+            "batteryCapacitySoc": 63,
+            "batteryPower": -430.0,
+            "familyLoadPower": 327.0
+          },
+          {
+            "dataTimestamp": "1789690182565",
+            "time": "08:09:42",
+            "pac": 0,
+            "batteryCapacitySoc": 62,
+            "batteryPower": -430.0,
+            "familyLoadPower": 326.0
+          },
+          {
+            "dataTimestamp": "1789690344777",
+            "time": "08:12:24",
+            "pac": 0,
+            "batteryCapacitySoc": 62,
+            "batteryPower": -420.0,
+            "familyLoadPower": 325.0
+          },
+          {
+            "dataTimestamp": "1789690644957",
+            "time": "08:17:24",
+            "pac": 0,
+            "batteryCapacitySoc": 62,
+            "batteryPower": -420.0,
+            "familyLoadPower": 315.0
+          },
+          {
+            "dataTimestamp": "1789690945053",
+            "time": "08:22:25",
+            "pac": 0,
+            "batteryCapacitySoc": 62,
+            "batteryPower": -420.0,
+            "familyLoadPower": 311.0
+          },
+          {
+            "dataTimestamp": "1789691245056",
+            "time": "08:27:25",
+            "pac": 0,
+            "batteryCapacitySoc": 62,
+            "batteryPower": -378.0,
+            "familyLoadPower": 271.0
+          },
+          {
+            "dataTimestamp": "1789691545149",
+            "time": "08:32:25",
+            "pac": 0,
+            "batteryCapacitySoc": 62,
+            "batteryPower": -404.0,
+            "familyLoadPower": 306.0
+          },
+          {
+            "dataTimestamp": "1789691845153",
+            "time": "08:37:25",
+            "pac": 0,
+            "batteryCapacitySoc": 62,
+            "batteryPower": -399.0,
+            "familyLoadPower": 300.0
+          },
+          {
+            "dataTimestamp": "1789692144984",
+            "time": "08:42:24",
+            "pac": 0,
+            "batteryCapacitySoc": 61,
+            "batteryPower": -399.0,
+            "familyLoadPower": 301.0
+          },
+          {
+            "dataTimestamp": "1789692444949",
+            "time": "08:47:24",
+            "pac": 0,
+            "batteryCapacitySoc": 61,
+            "batteryPower": -399.0,
+            "familyLoadPower": 304.0
+          },
+          {
+            "dataTimestamp": "1789692744955",
+            "time": "08:52:24",
+            "pac": 0,
+            "batteryCapacitySoc": 61,
+            "batteryPower": -399.0,
+            "familyLoadPower": 305.0
+          },
+          {
+            "dataTimestamp": "1789693044957",
+            "time": "08:57:24",
+            "pac": 0,
+            "batteryCapacitySoc": 61,
+            "batteryPower": -372.0,
+            "familyLoadPower": 276.0
+          },
+          {
+            "dataTimestamp": "1789693345051",
+            "time": "09:02:25",
+            "pac": 0,
+            "batteryCapacitySoc": 61,
+            "batteryPower": -440.0,
+            "familyLoadPower": 340.0
+          },
+          {
+            "dataTimestamp": "1789693645088",
+            "time": "09:07:25",
+            "pac": 0,
+            "batteryCapacitySoc": 59,
+            "batteryPower": -5196.0,
+            "familyLoadPower": 7631.0
+          },
+          {
+            "dataTimestamp": "1789693945059",
+            "time": "09:12:25",
+            "pac": 0,
+            "batteryCapacitySoc": 57,
+            "batteryPower": -5212.0,
+            "familyLoadPower": 7644.0
+          },
+          {
+            "dataTimestamp": "1789694244859",
+            "time": "09:17:24",
+            "pac": 0,
+            "batteryCapacitySoc": 55,
+            "batteryPower": -5227.0,
+            "familyLoadPower": 7617.0
+          },
+          {
+            "dataTimestamp": "1789694544975",
+            "time": "09:22:24",
+            "pac": 0,
+            "batteryCapacitySoc": 53,
+            "batteryPower": -5227.0,
+            "familyLoadPower": 7642.0
+          },
+          {
+            "dataTimestamp": "1789694844954",
+            "time": "09:27:24",
+            "pac": 0,
+            "batteryCapacitySoc": 51,
+            "batteryPower": -5232.0,
+            "familyLoadPower": 7625.0
+          },
+          {
+            "dataTimestamp": "1789695144867",
+            "time": "09:32:24",
+            "pac": 0,
+            "batteryCapacitySoc": 49,
+            "batteryPower": -5242.0,
+            "familyLoadPower": 7695.0
+          },
+          {
+            "dataTimestamp": "1789695444959",
+            "time": "09:37:24",
+            "pac": 0,
+            "batteryCapacitySoc": 47,
+            "batteryPower": -5237.0,
+            "familyLoadPower": 7663.0
+          },
+          {
+            "dataTimestamp": "1789695744962",
+            "time": "09:42:24",
+            "pac": 0,
+            "batteryCapacitySoc": 45,
+            "batteryPower": -5231.0,
+            "familyLoadPower": 7663.0
+          },
+          {
+            "dataTimestamp": "1789696045061",
+            "time": "09:47:25",
+            "pac": 0,
+            "batteryCapacitySoc": 43,
+            "batteryPower": -4410.0,
+            "familyLoadPower": 7625.0
+          },
+          {
+            "dataTimestamp": "1789696344673",
+            "time": "09:52:24",
+            "pac": 0,
+            "batteryCapacitySoc": 41,
+            "batteryPower": -4415.0,
+            "familyLoadPower": 7647.0
+          },
+          {
+            "dataTimestamp": "1789696644891",
+            "time": "09:57:24",
+            "pac": 0,
+            "batteryCapacitySoc": 39,
+            "batteryPower": -4402.0,
+            "familyLoadPower": 7628.0
+          },
+          {
+            "dataTimestamp": "1789696944855",
+            "time": "10:02:24",
+            "pac": 0,
+            "batteryCapacitySoc": 38,
+            "batteryPower": -4398.0,
+            "familyLoadPower": 7629.0
+          },
+          {
+            "dataTimestamp": "1789697244865",
+            "time": "10:07:24",
+            "pac": 0,
+            "batteryCapacitySoc": 36,
+            "batteryPower": -4381.0,
+            "familyLoadPower": 7640.0
+          },
+          {
+            "dataTimestamp": "1789697544953",
+            "time": "10:12:24",
+            "pac": 0,
+            "batteryCapacitySoc": 34,
+            "batteryPower": -4381.0,
+            "familyLoadPower": 7635.0
+          },
+          {
+            "dataTimestamp": "1789697844965",
+            "time": "10:17:24",
+            "pac": 0,
+            "batteryCapacitySoc": 33,
+            "batteryPower": -4363.0,
+            "familyLoadPower": 7649.0
+          },
+          {
+            "dataTimestamp": "1789698145092",
+            "time": "10:22:25",
+            "pac": 0,
+            "batteryCapacitySoc": 31,
+            "batteryPower": -4350.0,
+            "familyLoadPower": 7631.0
+          },
+          {
+            "dataTimestamp": "1789698445091",
+            "time": "10:27:25",
+            "pac": 0,
+            "batteryCapacitySoc": 29,
+            "batteryPower": -4327.0,
+            "familyLoadPower": 7578.0
+          },
+          {
+            "dataTimestamp": "1789698745157",
+            "time": "10:32:25",
+            "pac": 0,
+            "batteryCapacitySoc": 27,
+            "batteryPower": -4323.0,
+            "familyLoadPower": 7594.0
+          },
+          {
+            "dataTimestamp": "1789699045158",
+            "time": "10:37:25",
+            "pac": 0,
+            "batteryCapacitySoc": 26,
+            "batteryPower": -4306.0,
+            "familyLoadPower": 7613.0
+          },
+          {
+            "dataTimestamp": "1789699345160",
+            "time": "10:42:25",
+            "pac": 0,
+            "batteryCapacitySoc": 24,
+            "batteryPower": -4289.0,
+            "familyLoadPower": 7601.0
+          },
+          {
+            "dataTimestamp": "1789699645073",
+            "time": "10:47:25",
+            "pac": 0,
+            "batteryCapacitySoc": 22,
+            "batteryPower": -4254.0,
+            "familyLoadPower": 7647.0
+          },
+          {
+            "dataTimestamp": "1789699945084",
+            "time": "10:52:25",
+            "pac": 0,
+            "batteryCapacitySoc": 12,
+            "batteryPower": 0,
+            "familyLoadPower": 7575.0
+          },
+          {
+            "dataTimestamp": "1789700248093",
+            "time": "10:57:28",
+            "pac": 0,
+            "batteryCapacitySoc": 11,
+            "batteryPower": 4502.0,
+            "familyLoadPower": 7572.0
+          },
+          {
+            "dataTimestamp": "1789700545088",
+            "time": "11:02:25",
+            "pac": 0,
+            "batteryCapacitySoc": 12,
+            "batteryPower": 4547.0,
+            "familyLoadPower": 7880.0
+          },
+          {
+            "dataTimestamp": "1789700845058",
+            "time": "11:07:25",
+            "pac": 0,
+            "batteryCapacitySoc": 14,
+            "batteryPower": 4566.0,
+            "familyLoadPower": 7886.0
+          },
+          {
+            "dataTimestamp": "1789701145151",
+            "time": "11:12:25",
+            "pac": 0,
+            "batteryCapacitySoc": 16,
+            "batteryPower": 4580.0,
+            "familyLoadPower": 7840.0
+          },
+          {
+            "dataTimestamp": "1789701444947",
+            "time": "11:17:24",
+            "pac": 0,
+            "batteryCapacitySoc": 16,
+            "batteryPower": -4403.0,
+            "familyLoadPower": 7929.0
+          },
+          {
+            "dataTimestamp": "1789701745071",
+            "time": "11:22:25",
+            "pac": 0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 7926.0
+          },
+          {
+            "dataTimestamp": "1789702045090",
+            "time": "11:27:25",
+            "pac": 0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 7821.0
+          },
+          {
+            "dataTimestamp": "1789702347956",
+            "time": "11:32:27",
+            "pac": 0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 7554.0
+          },
+          {
+            "dataTimestamp": "1789702644958",
+            "time": "11:37:24",
+            "pac": 0,
+            "batteryCapacitySoc": 0,
+            "batteryPower": 0,
+            "familyLoadPower": 7638.0
+          },
+          {
+            "dataTimestamp": "1789702945086",
+            "time": "11:42:25",
+            "pac": 0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 7655.0
+          },
+          {
+            "dataTimestamp": "1789703245146",
+            "time": "11:47:25",
+            "pac": 0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 7639.0
+          },
+          {
+            "dataTimestamp": "1789703544971",
+            "time": "11:52:24",
+            "pac": 0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 7613.0
+          },
+          {
+            "dataTimestamp": "1789703845065",
+            "time": "11:57:25",
+            "pac": 0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 7627.0
+          },
+          {
+            "dataTimestamp": "1789704145160",
+            "time": "12:02:25",
+            "pac": 0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 7567.0
+          },
+          {
+            "dataTimestamp": "1789704444979",
+            "time": "12:07:24",
+            "pac": 0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 7580.0
+          },
+          {
+            "dataTimestamp": "1789704744952",
+            "time": "12:12:24",
+            "pac": 0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 7546.0
+          },
+          {
+            "dataTimestamp": "1789705045113",
+            "time": "12:17:25",
+            "pac": 0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 9634.0
+          },
+          {
+            "dataTimestamp": "1789705345133",
+            "time": "12:22:25",
+            "pac": 0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 9669.0
+          },
+          {
+            "dataTimestamp": "1789705645147",
+            "time": "12:27:25",
+            "pac": 0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 9657.0
+          },
+          {
+            "dataTimestamp": "1789705945069",
+            "time": "12:32:25",
+            "pac": 0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 9544.0
+          },
+          {
+            "dataTimestamp": "1789706245172",
+            "time": "12:37:25",
+            "pac": 0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 9609.0
+          },
+          {
+            "dataTimestamp": "1789706545175",
+            "time": "12:42:25",
+            "pac": 0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 9653.0
+          },
+          {
+            "dataTimestamp": "1789706848069",
+            "time": "12:47:28",
+            "pac": 0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 9637.0
+          },
+          {
+            "dataTimestamp": "1789707145163",
+            "time": "12:52:25",
+            "pac": 0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 9650.0
+          },
+          {
+            "dataTimestamp": "1789707445079",
+            "time": "12:57:25",
+            "pac": 0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 2519.0
+          },
+          {
+            "dataTimestamp": "1789707745088",
+            "time": "13:02:25",
+            "pac": 0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 246.0
+          },
+          {
+            "dataTimestamp": "1789708045146",
+            "time": "13:07:25",
+            "pac": 0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 248.0
+          },
+          {
+            "dataTimestamp": "1789708345148",
+            "time": "13:12:25",
+            "pac": 0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 326.0
+          },
+          {
+            "dataTimestamp": "1789708645151",
+            "time": "13:17:25",
+            "pac": 0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 320.0
+          },
+          {
+            "dataTimestamp": "1789708945160",
+            "time": "13:22:25",
+            "pac": 0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 317.0
+          },
+          {
+            "dataTimestamp": "1789709248249",
+            "time": "13:27:28",
+            "pac": 0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 367.0
+          },
+          {
+            "dataTimestamp": "1789709545078",
+            "time": "13:32:25",
+            "pac": 7.0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 289.0
+          },
+          {
+            "dataTimestamp": "1789709845076",
+            "time": "13:37:25",
+            "pac": 14.0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 218.0
+          },
+          {
+            "dataTimestamp": "1789710145087",
+            "time": "13:42:25",
+            "pac": 16.0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 336.0
+          },
+          {
+            "dataTimestamp": "1789710445089",
+            "time": "13:47:25",
+            "pac": 20.0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 305.0
+          },
+          {
+            "dataTimestamp": "1789710745150",
+            "time": "13:52:25",
+            "pac": 22.0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 314.0
+          },
+          {
+            "dataTimestamp": "1789711045149",
+            "time": "13:57:25",
+            "pac": 24.0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 280.0
+          },
+          {
+            "dataTimestamp": "1789711344859",
+            "time": "14:02:24",
+            "pac": 25.0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 256.0
+          },
+          {
+            "dataTimestamp": "1789711645154",
+            "time": "14:07:25",
+            "pac": 25.0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 397.0
+          },
+          {
+            "dataTimestamp": "1789711944971",
+            "time": "14:12:24",
+            "pac": 25.0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 319.0
+          },
+          {
+            "dataTimestamp": "1789712245072",
+            "time": "14:17:25",
+            "pac": 26.0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 312.0
+          },
+          {
+            "dataTimestamp": "1789712545156",
+            "time": "14:22:25",
+            "pac": 26.0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 310.0
+          },
+          {
+            "dataTimestamp": "1789712845071",
+            "time": "14:27:25",
+            "pac": 26.0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 287.0
+          },
+          {
+            "dataTimestamp": "1789713148077",
+            "time": "14:32:28",
+            "pac": 26.0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 239.0
+          },
+          {
+            "dataTimestamp": "1789713445173",
+            "time": "14:37:25",
+            "pac": 27.0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 252.0
+          },
+          {
+            "dataTimestamp": "1789713745078",
+            "time": "14:42:25",
+            "pac": 27.0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 303.0
+          },
+          {
+            "dataTimestamp": "1789714047856",
+            "time": "14:47:27",
+            "pac": 57.0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 310.0
+          },
+          {
+            "dataTimestamp": "1789714345138",
+            "time": "14:52:25",
+            "pac": 108.0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 318.0
+          },
+          {
+            "dataTimestamp": "1789714645151",
+            "time": "14:57:25",
+            "pac": 205.0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 317.0
+          },
+          {
+            "dataTimestamp": "1789714945248",
+            "time": "15:02:25",
+            "pac": 270.0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 316.0
+          },
+          {
+            "dataTimestamp": "1789715245157",
+            "time": "15:07:25",
+            "pac": 356.0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 253.0
+          },
+          {
+            "dataTimestamp": "1789715545161",
+            "time": "15:12:25",
+            "pac": 370.0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 287.0
+          },
+          {
+            "dataTimestamp": "1789715845164",
+            "time": "15:17:25",
+            "pac": 478.0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 317.0
+          },
+          {
+            "dataTimestamp": "1789716148401",
+            "time": "15:22:28",
+            "pac": 523.0,
+            "batteryCapacitySoc": 14,
+            "batteryPower": 0,
+            "familyLoadPower": 269.0
+          },
+          {
+            "dataTimestamp": "1789716445266",
+            "time": "15:27:25",
+            "pac": 607.0,
+            "batteryCapacitySoc": 14,
+            "batteryPower": 0,
+            "familyLoadPower": 256.0
+          },
+          {
+            "dataTimestamp": "1789716745443",
+            "time": "15:32:25",
+            "pac": 561.0,
+            "batteryCapacitySoc": 14,
+            "batteryPower": 149.0,
+            "familyLoadPower": 243.0
+          },
+          {
+            "dataTimestamp": "1789717045361",
+            "time": "15:37:25",
+            "pac": 530.0,
+            "batteryCapacitySoc": 14,
+            "batteryPower": 164.0,
+            "familyLoadPower": 260.0
+          },
+          {
+            "dataTimestamp": "1789717345150",
+            "time": "15:42:25",
+            "pac": 675.0,
+            "batteryCapacitySoc": 14,
+            "batteryPower": 211.0,
+            "familyLoadPower": 325.0
+          },
+          {
+            "dataTimestamp": "1789717645244",
+            "time": "15:47:25",
+            "pac": 594.0,
+            "batteryCapacitySoc": 14,
+            "batteryPower": 108.0,
+            "familyLoadPower": 320.0
+          },
+          {
+            "dataTimestamp": "1789717945159",
+            "time": "15:52:25",
+            "pac": 613.0,
+            "batteryCapacitySoc": 14,
+            "batteryPower": 175.0,
+            "familyLoadPower": 286.0
+          },
+          {
+            "dataTimestamp": "1789718245078",
+            "time": "15:57:25",
+            "pac": 635.0,
+            "batteryCapacitySoc": 14,
+            "batteryPower": 180.0,
+            "familyLoadPower": 326.0
+          },
+          {
+            "dataTimestamp": "1789718545261",
+            "time": "16:02:25",
+            "pac": 717.0,
+            "batteryCapacitySoc": 14,
+            "batteryPower": 347.0,
+            "familyLoadPower": 240.0
+          },
+          {
+            "dataTimestamp": "1789718845468",
+            "time": "16:07:25",
+            "pac": 588.0,
+            "batteryCapacitySoc": 14,
+            "batteryPower": 269.0,
+            "familyLoadPower": 165.0
+          },
+          {
+            "dataTimestamp": "1789719145358",
+            "time": "16:12:25",
+            "pac": 455.0,
+            "batteryCapacitySoc": 14,
+            "batteryPower": 0,
+            "familyLoadPower": 311.0
+          },
+          {
+            "dataTimestamp": "1789719445200",
+            "time": "16:17:25",
+            "pac": 419.0,
+            "batteryCapacitySoc": 14,
+            "batteryPower": 0,
+            "familyLoadPower": 423.0
+          },
+          {
+            "dataTimestamp": "1789719745153",
+            "time": "16:22:25",
+            "pac": 638.0,
+            "batteryCapacitySoc": 14,
+            "batteryPower": 25.0,
+            "familyLoadPower": 786.0
+          },
+          {
+            "dataTimestamp": "1789720048271",
+            "time": "16:27:28",
+            "pac": 1286.0,
+            "batteryCapacitySoc": 14,
+            "batteryPower": 616.0,
+            "familyLoadPower": 392.0
+          },
+          {
+            "dataTimestamp": "1789720348246",
+            "time": "16:32:28",
+            "pac": 1265.0,
+            "batteryCapacitySoc": 14,
+            "batteryPower": 759.0,
+            "familyLoadPower": 365.0
+          },
+          {
+            "dataTimestamp": "1789720645079",
+            "time": "16:37:25",
+            "pac": 1174.0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 724.0,
+            "familyLoadPower": 362.0
+          },
+          {
+            "dataTimestamp": "1789720945073",
+            "time": "16:42:25",
+            "pac": 828.0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 358.0,
+            "familyLoadPower": 357.0
+          },
+          {
+            "dataTimestamp": "1789721245356",
+            "time": "16:47:25",
+            "pac": 718.0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 171.0,
+            "familyLoadPower": 390.0
+          },
+          {
+            "dataTimestamp": "1789721545364",
+            "time": "16:52:25",
+            "pac": 487.0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 15.0,
+            "familyLoadPower": 330.0
+          },
+          {
+            "dataTimestamp": "1789721845357",
+            "time": "16:57:25",
+            "pac": 423.0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 51.0,
+            "familyLoadPower": 221.0
+          },
+          {
+            "dataTimestamp": "1789722145150",
+            "time": "17:02:25",
+            "pac": 356.0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 309.0
+          },
+          {
+            "dataTimestamp": "1789722445154",
+            "time": "17:07:25",
+            "pac": 482.0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 622.0
+          },
+          {
+            "dataTimestamp": "1789722745360",
+            "time": "17:12:25",
+            "pac": 448.0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 620.0
+          },
+          {
+            "dataTimestamp": "1789723045453",
+            "time": "17:17:25",
+            "pac": 415.0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 655.0
+          },
+          {
+            "dataTimestamp": "1789723345249",
+            "time": "17:22:25",
+            "pac": 336.0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 329.0
+          },
+          {
+            "dataTimestamp": "1789723645071",
+            "time": "17:27:25",
+            "pac": 390.0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 286.0
+          },
+          {
+            "dataTimestamp": "1789723945166",
+            "time": "17:32:25",
+            "pac": 422.0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 315.0
+          },
+          {
+            "dataTimestamp": "1789724245260",
+            "time": "17:37:25",
+            "pac": 323.0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 318.0
+          },
+          {
+            "dataTimestamp": "1789724545141",
+            "time": "17:42:25",
+            "pac": 218.0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 317.0
+          },
+          {
+            "dataTimestamp": "1789724845264",
+            "time": "17:47:25",
+            "pac": 285.0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 320.0
+          },
+          {
+            "dataTimestamp": "1789725145363",
+            "time": "17:52:25",
+            "pac": 325.0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 322.0
+          },
+          {
+            "dataTimestamp": "1789725445368",
+            "time": "17:57:25",
+            "pac": 288.0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 259.0
+          },
+          {
+            "dataTimestamp": "1789725745349",
+            "time": "18:02:25",
+            "pac": 218.0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 263.0
+          },
+          {
+            "dataTimestamp": "1789726045355",
+            "time": "18:07:25",
+            "pac": 282.0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 226.0
+          },
+          {
+            "dataTimestamp": "1789726345357",
+            "time": "18:12:25",
+            "pac": 250.0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 233.0
+          },
+          {
+            "dataTimestamp": "1789726645451",
+            "time": "18:17:25",
+            "pac": 304.0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 225.0
+          },
+          {
+            "dataTimestamp": "1789726945460",
+            "time": "18:22:25",
+            "pac": 250.0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 173.0
+          },
+          {
+            "dataTimestamp": "1789727245340",
+            "time": "18:27:25",
+            "pac": 325.0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 239.0
+          },
+          {
+            "dataTimestamp": "1789727545350",
+            "time": "18:32:25",
+            "pac": 391.0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 62.0,
+            "familyLoadPower": 212.0
+          },
+          {
+            "dataTimestamp": "1789727845348",
+            "time": "18:37:25",
+            "pac": 266.0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 140.0
+          },
+          {
+            "dataTimestamp": "1789728145152",
+            "time": "18:42:25",
+            "pac": 219.0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 146.0
+          },
+          {
+            "dataTimestamp": "1789728445354",
+            "time": "18:47:25",
+            "pac": 291.0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 174.0
+          },
+          {
+            "dataTimestamp": "1789728748364",
+            "time": "18:52:28",
+            "pac": 288.0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 2309.0
+          },
+          {
+            "dataTimestamp": "1789729045152",
+            "time": "18:57:25",
+            "pac": 321.0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 642.0
+          },
+          {
+            "dataTimestamp": "1789729345458",
+            "time": "19:02:25",
+            "pac": 275.0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 650.0
+          },
+          {
+            "dataTimestamp": "1789729645459",
+            "time": "19:07:25",
+            "pac": 325.0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 226.0
+          },
+          {
+            "dataTimestamp": "1789729945339",
+            "time": "19:12:25",
+            "pac": 340.0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 269.0
+          },
+          {
+            "dataTimestamp": "1789730245253",
+            "time": "19:17:25",
+            "pac": 288.0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 380.0
+          },
+          {
+            "dataTimestamp": "1789730548401",
+            "time": "19:22:28",
+            "pac": 390.0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 374.0
+          },
+          {
+            "dataTimestamp": "1789730845142",
+            "time": "19:27:25",
+            "pac": 482.0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 402.0
+          },
+          {
+            "dataTimestamp": "1789731145154",
+            "time": "19:32:25",
+            "pac": 515.0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 326.0
+          },
+          {
+            "dataTimestamp": "1789731448360",
+            "time": "19:37:28",
+            "pac": 432.0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 368.0
+          },
+          {
+            "dataTimestamp": "1789731745362",
+            "time": "19:42:25",
+            "pac": 443.0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 492.0
+          },
+          {
+            "dataTimestamp": "1789732048456",
+            "time": "19:47:28",
+            "pac": 406.0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 520.0
+          },
+          {
+            "dataTimestamp": "1789732348070",
+            "time": "19:52:28",
+            "pac": 357.0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 437.0
+          },
+          {
+            "dataTimestamp": "1789732645343",
+            "time": "19:57:25",
+            "pac": 382.0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 474.0
+          },
+          {
+            "dataTimestamp": "1789732968080",
+            "time": "20:02:48",
+            "pac": 319.0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 476.0
+          },
+          {
+            "dataTimestamp": "1789733096448",
+            "time": "20:04:56",
+            "pac": 291.0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 560.0
+          },
+          {
+            "dataTimestamp": "1789733224157",
+            "time": "20:07:04",
+            "pac": 325.0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 479.0
+          },
+          {
+            "dataTimestamp": "1789733257976",
+            "time": "20:07:37",
+            "pac": 325.0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 478.0
+          },
+          {
+            "dataTimestamp": "1789733386453",
+            "time": "20:09:46",
+            "pac": 358.0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 566.0
+          },
+          {
+            "dataTimestamp": "1789733549954",
+            "time": "20:12:29",
+            "pac": 383.0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 511.0
+          },
+          {
+            "dataTimestamp": "1789733850079",
+            "time": "20:17:30",
+            "pac": 351.0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 456.0
+          },
+          {
+            "dataTimestamp": "1789734149843",
+            "time": "20:22:29",
+            "pac": 186.0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 510.0
+          },
+          {
+            "dataTimestamp": "1789734449847",
+            "time": "20:27:29",
+            "pac": 299.0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 525.0
+          },
+          {
+            "dataTimestamp": "1789734752850",
+            "time": "20:32:32",
+            "pac": 200.0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 493.0
+          },
+          {
+            "dataTimestamp": "1789735049774",
+            "time": "20:37:29",
+            "pac": 202.0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 548.0
+          },
+          {
+            "dataTimestamp": "1789735350016",
+            "time": "20:42:30",
+            "pac": 202.0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 464.0
+          },
+          {
+            "dataTimestamp": "1789735649953",
+            "time": "20:47:29",
+            "pac": 316.0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 584.0
+          },
+          {
+            "dataTimestamp": "1789735949742",
+            "time": "20:52:29",
+            "pac": 355.0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 542.0
+          },
+          {
+            "dataTimestamp": "1789736249959",
+            "time": "20:57:29",
+            "pac": 312.0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 618.0
+          },
+          {
+            "dataTimestamp": "1789736549698",
+            "time": "21:02:29",
+            "pac": 354.0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 412.0
+          },
+          {
+            "dataTimestamp": "1789736849846",
+            "time": "21:07:29",
+            "pac": 316.0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 322.0
+          },
+          {
+            "dataTimestamp": "1789737149966",
+            "time": "21:12:29",
+            "pac": 288.0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 335.0
+          },
+          {
+            "dataTimestamp": "1789737449887",
+            "time": "21:17:29",
+            "pac": 512.0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 0,
+            "familyLoadPower": 384.0
+          },
+          {
+            "dataTimestamp": "1789737749858",
+            "time": "21:22:29",
+            "pac": 526.0,
+            "batteryCapacitySoc": 15,
+            "batteryPower": 20.0,
+            "familyLoadPower": 402.0
+          }
+        ]
+      }
+    },
+    {
+      "path": "/v2/api/atRead",
+      "request_fields": {
+        "cid": 543
+      },
+      "http": 200,
+      "response": {
+        "msg": "success",
+        "code": "0",
+        "data": {
+          "msg": "0",
+          "yuanzhi": "33",
+          "command": "AT+TEST=GIN485:01 03 a8 66 00 01 44 75",
+          "needLoop": "false"
+        },
+        "orderId": "0",
+        "time": "1789737875013",
+        "inverterSn": "[REDACTED]",
+        "cid": "543",
+        "sendTime": "1789737875017"
+      }
+    },
+    {
+      "path": "/v2/api/atRead",
+      "request_fields": {
+        "cid": 5917
+      },
+      "http": 200,
+      "response": {
+        "msg": "success",
+        "code": "0",
+        "data": {
+          "msg": "0",
+          "yuanzhi": "0",
+          "command": "AT+TEST=GIN485:01 03 aa bb 00 01 d5 f7",
+          "needLoop": "false"
+        },
+        "orderId": "0",
+        "time": "1789737880114",
+        "inverterSn": "[REDACTED]",
+        "cid": "5917",
+        "sendTime": "1789737880133"
+      }
+    },
+    {
+      "path": "/v2/api/atRead",
+      "request_fields": {
+        "cid": 5918
+      },
+      "http": 200,
+      "response": {
+        "msg": "success",
+        "code": "0",
+        "data": {
+          "msg": "0",
+          "yuanzhi": "0",
+          "command": "AT+TEST=GIN485:01 03 aa bb 00 01 d5 f7",
+          "needLoop": "false"
+        },
+        "orderId": "0",
+        "time": "1789737891421",
+        "inverterSn": "[REDACTED]",
+        "cid": "5918",
+        "sendTime": "1789737891425"
+      }
+    },
+    {
+      "path": "/v2/api/atRead",
+      "request_fields": {
+        "cid": 5919
+      },
+      "http": 200,
+      "response": {
+        "msg": "success",
+        "code": "0",
+        "data": {
+          "msg": "0",
+          "yuanzhi": "0",
+          "command": "AT+TEST=GIN485:01 03 aa bb 00 01 d5 f7",
+          "needLoop": "false"
+        },
+        "orderId": "0",
+        "time": "1789737893931",
+        "inverterSn": "[REDACTED]",
+        "cid": "5919",
+        "sendTime": "1789737893935"
+      }
+    },
+    {
+      "path": "/v2/api/atRead",
+      "request_fields": {
+        "cid": 5920
+      },
+      "http": 200,
+      "response": {
+        "msg": "success",
+        "code": "0",
+        "data": {
+          "msg": "0",
+          "yuanzhi": "0",
+          "command": "AT+TEST=GIN485:01 03 aa bb 00 01 d5 f7",
+          "needLoop": "false"
+        },
+        "orderId": "0",
+        "time": "1789737896851",
+        "inverterSn": "[REDACTED]",
+        "cid": "5920",
+        "sendTime": "1789737896869"
+      }
+    },
+    {
+      "path": "/v2/api/atRead",
+      "request_fields": {
+        "cid": 5921
+      },
+      "http": 200,
+      "response": {
+        "msg": "success",
+        "code": "0",
+        "data": {
+          "msg": "0",
+          "yuanzhi": "0",
+          "command": "AT+TEST=GIN485:01 03 aa bb 00 01 d5 f7",
+          "needLoop": "false"
+        },
+        "orderId": "0",
+        "time": "1789737900518",
+        "inverterSn": "[REDACTED]",
+        "cid": "5921",
+        "sendTime": "1789737900523"
+      }
+    },
+    {
+      "path": "/v2/api/atRead",
+      "request_fields": {
+        "cid": 5923
+      },
+      "http": 200,
+      "response": {
+        "msg": "success",
+        "code": "0",
+        "data": {
+          "msg": "0",
+          "yuanzhi": "0",
+          "command": "AT+TEST=GIN485:01 03 aa bb 00 01 d5 f7",
+          "needLoop": "false"
+        },
+        "orderId": "0",
+        "time": "1789737914729",
+        "inverterSn": "[REDACTED]",
+        "cid": "5923",
+        "sendTime": "1789737914762"
+      }
+    },
+    {
+      "path": "/v2/api/atRead",
+      "request_fields": {
+        "cid": 5924
+      },
+      "http": 200,
+      "response": {
+        "msg": "success",
+        "code": "0",
+        "data": {
+          "msg": "0",
+          "yuanzhi": "0",
+          "command": "AT+TEST=GIN485:01 03 aa bb 00 01 d5 f7",
+          "needLoop": "false"
+        },
+        "orderId": "0",
+        "time": "1789737926466",
+        "inverterSn": "[REDACTED]",
+        "cid": "5924",
+        "sendTime": "1789737926486"
+      }
+    },
+    {
+      "path": "/v2/api/atRead",
+      "request_fields": {
+        "cid": 5925
+      },
+      "http": 200,
+      "response": {
+        "msg": "success",
+        "code": "0",
+        "data": {
+          "msg": "0",
+          "yuanzhi": "0",
+          "command": "AT+TEST=GIN485:01 03 aa bb 00 01 d5 f7",
+          "needLoop": "false"
+        },
+        "orderId": "0",
+        "time": "1789737936811",
+        "inverterSn": "[REDACTED]",
+        "cid": "5925",
+        "sendTime": "1789737936825"
+      }
+    },
+    {
+      "path": "/v2/api/atRead",
+      "request_fields": {
+        "cid": 5926
+      },
+      "http": 200,
+      "response": {
+        "msg": "success",
+        "code": "0",
+        "data": {
+          "msg": "0",
+          "yuanzhi": "0",
+          "command": "AT+TEST=GIN485:01 03 aa bb 00 01 d5 f7",
+          "needLoop": "false"
+        },
+        "orderId": "0",
+        "time": "1789737954094",
+        "inverterSn": "[REDACTED]",
+        "cid": "5926",
+        "sendTime": "1789737954107"
+      }
+    },
+    {
+      "path": "/v2/api/atRead",
+      "request_fields": {
+        "cid": 5927
+      },
+      "http": 200,
+      "response": {
+        "msg": "success",
+        "code": "0",
+        "data": {
+          "msg": "0",
+          "yuanzhi": "0",
+          "command": "AT+TEST=GIN485:01 03 aa bb 00 01 d5 f7",
+          "needLoop": "false"
+        },
+        "orderId": "0",
+        "time": "1789737968035",
+        "inverterSn": "[REDACTED]",
+        "cid": "5927",
+        "sendTime": "1789737968053"
+      }
+    }
+  ]
+}
